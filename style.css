@@ -73,3 +73,21 @@ body {
 .accardion__input:checked ~ .accardion__lable > .accardion__title {
   color: rgb(104, 37, 192);
 }
+@media (hover: hover) {
+  .accardion__li:hover > .accardion__lable .accardion__btn {
+    transform: rotate(135deg);
+  }
+  .accardion__li:hover .accardion__img {
+    width: 50%;
+    height: 30rem;
+  }
+  .accardion:hover {
+    color: rgb(97, 84, 84);
+  }
+  .accardion__lable:hover {
+    cursor: pointer;
+  }
+  .accardion__lable:active {
+    opacity: 0.6;
+  }
+}
