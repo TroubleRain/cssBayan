@@ -63,3 +63,13 @@ body {
   height: 100%;
   object-fit: contain;
 }
+.accardion__input:checked ~ .accardion__lable .accardion__btn {
+  transform: rotate(135deg);
+}
+.accardion__input:checked ~ .accardion__lable > .accardion__img {
+  width: 50%;
+  height: 30rem;
+}
+.accardion__input:checked ~ .accardion__lable > .accardion__title {
+  color: rgb(104, 37, 192);
+}
