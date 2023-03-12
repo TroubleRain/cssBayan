@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   transition: 0.35s all;
 }
-.accardion__li {
+.accardion__item {
   display: flex;
   flex-direction: column;
 }
@@ -74,10 +74,10 @@ body {
   color: rgb(104, 37, 192);
 }
 @media (hover: hover) {
-  .accardion__li:hover > .accardion__lable .accardion__btn {
+  .accardion__item:hover > .accardion__lable .accardion__btn {
     transform: rotate(135deg);
   }
-  .accardion__li:hover .accardion__img {
+  .accardion__item:hover .accardion__img {
     width: 50%;
     height: 30rem;
   }
