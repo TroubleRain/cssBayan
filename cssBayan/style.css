@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: black;
+  list-style: none;
+  width: 100vw;
+  height: 100vh;
+  background: aqua;
+  font-family: Sono;
+  overflow-x: hidden;
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 75rem;
+  padding: 0 0.5rem;
+}
+.accardion {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: 0.35s all;
+}
+.accardion__item {
+  display: flex;
+  flex-direction: column;
+}
+.accardion__input {
+  height: 0;
+}
+.accardion__lable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 0.2rem solid rgb(24, 13, 117);
+  padding: 1rem 0;
+}
+.accardion__title {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  padding: 0.3rem;
+}
+.accardion__btn {
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.5s;
+}
+.accardion__img {
+  margin: 0 auto;
+  background: inherit;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.4s;
+  flex: 1 1 100%;
+}
+.accardion__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.accardion__input:checked ~ .accardion__lable .accardion__btn {
+  transform: rotate(135deg);
+}
+.accardion__input:checked ~ .accardion__lable > .accardion__img {
+  width: 50%;
+  height: 30rem;
+}
+.accardion__input:checked ~ .accardion__lable > .accardion__title {
+  color: rgb(104, 37, 192);
+}
+@media (hover: hover) {
+  .accardion__item:hover > .accardion__lable .accardion__btn {
+    transform: rotate(135deg);
+  }
+  .accardion__item:hover .accardion__img {
+    width: 50%;
+    height: 30rem;
+  }
+  .accardion:hover {
+    color: rgb(97, 84, 84);
+  }
+  .accardion__lable:hover {
+    cursor: pointer;
+  }
+  .accardion__lable:active {
+    opacity: 0.6;
+  }
+}
+@media (max-width: 51.25em) {
+  h1 {
+    margin-left: 0.8rem;
+    font-size: 3rem;
+  }
+  .accardion__title {
+    font-size: 1.8rem;
+  }
+  .container {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 20em) {
+  h1 {
+    font-size: 2rem;
+  }
+  .accardion__title {
+    font-size: 1.3rem;
+  }
+  .accardion__btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .accardion__input:checked ~ .accardion__lable > .accardion__img {
+    padding: 0.7rem;
+    width: 50%;
+    height: min-content;
+  }
+}
