@@ -91,3 +91,34 @@ body {
     opacity: 0.6;
   }
 }
+@media (max-width: 51.25em) {
+  h1 {
+    margin-left: 0.8rem;
+    font-size: 3rem;
+  }
+  .accardion__title {
+    font-size: 1.8rem;
+  }
+  .container {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 20em) {
+  h1 {
+    font-size: 2rem;
+  }
+  .accardion__title {
+    font-size: 1.3rem;
+  }
+  .accardion__btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .accardion__input:checked ~ .accardion__lable > .accardion__img {
+    padding: 0.7rem;
+    width: 50%;
+    height: min-content;
+  }
+}
